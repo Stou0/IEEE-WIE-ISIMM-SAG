@@ -68,15 +68,16 @@ function PlatformCard({
   imageSrc: string;
 }) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="group flex flex-col items-center text-center">
       <Image
         src={imageSrc}
         alt={`${name} logo`}
         width={100}
         height={100}
-        className="mb-4"
+        className="mb-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
       />
-      <h3 className="font-semibold mb-2">{name}</h3>
+      <h3 className="font-semibold ">{name}</h3>
+      <div className="w-0 transition-all ease-in-out delay-150 group-hover:w-[100px] duration-300 h-[2px] bg-black mb-2"></div>
       <p className="text-sm">{description}</p>
     </div>
   );
